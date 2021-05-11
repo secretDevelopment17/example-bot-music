@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "test": "eslint --ignore-path .gitignore \"**/**/*.+(js)\"",
+    "test:fix": "eslint --ignore-path .gitignore \"**/**/*.+(js)\" --fix .",
+    "start": "node src/bot",
+    "start:dev": "npm test && node src/bot"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^9.0.2",
+    "eslint": "^7.26.0",
+    "fs": "0.0.1-security",
+    "node-superfetch": "^0.2.3"
+  }
+}
