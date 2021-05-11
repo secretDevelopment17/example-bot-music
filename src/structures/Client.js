@@ -4,7 +4,6 @@ const ClientEvent = require("./ClientEvent");
 
 // Client Management
 const Command = require("../manager/Command");
-const Music = require("../manager/Music");
 
 // Extender discord.js Classes
 require("./User");
@@ -42,7 +41,6 @@ class MusicClient extends Client {
     async build() {
         this.once("ready", () => {
             this.manager.command.load();
-            this.manager.music = new Music(this);
         });
 
         new ClientEvent(this, resolve(__dirname, "..", "events")).load();
